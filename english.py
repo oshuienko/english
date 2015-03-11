@@ -3,13 +3,15 @@
 import random
 
 # окрытие файла с данными и преобразование их в словарь
-p = '/home/norbert/words.txt'
+put = '/home/norbert/Python_study/words.txt'
 words = {}
-for line in open(p):
+for line in open(put):
     line = line.split('\n')    # из строки получаем список
     line = line[0]             # избавляемся от последнего элемента (\n)
-    line = line.split(' ')     # разделяем данные
-    words[line[0]] = line[1]   # добавляем в словарь
+    line = line.split('|')     # разделяем данные
+    words[line[0]] = line[1]
+    words[line[1]] = line[0]
+                               # добавляем в словарь
                                # первый элемент списак - как ключ
                                # остальные - значение
 
@@ -27,7 +29,7 @@ while words:
         print('Good')
         s += 1    
     else:
-        print('Sorry,but it is mistake') 
+        print('Bad!') 
     words.pop(a)                             #удаление элемента со словаря
     print ('\n')
 print 'Results: ' + str(s)
