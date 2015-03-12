@@ -3,7 +3,7 @@
 import random
 
 # окрытие файла с данными и преобразование их в словарь
-put = '/home/norbert/Python_study/words_1.txt'
+put = '/home/norbert/Python_study/words.txt'
 words = {}
 for line in open(put):
     line = line.split('\n')    # избавляемся от последнего элемента (\n)
