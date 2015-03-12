@@ -3,7 +3,7 @@
 import random
 
 # окрытие файла с данными и преобразование их в словарь
-put = '/home/norbert/Python_study/words.txt'
+put = '/home/norbert/Python_study/words_1.txt'
 words = {}
 for line in open(put):
     line = line.split('\n')    # избавляемся от последнего элемента (\n)
@@ -24,7 +24,7 @@ while words:
     c = words.keys()                         #Вывод ключей словаря
     a = random.choice(c)                     #Вывод случайного ключа из словаря
     print(a)                                 #Вывод зн-ния user
-    b = raw_input('Please, transleting:  ')  #Ввод со стороны user значения
+    b = raw_input('Please, translate:  ')  #Ввод со стороны user значения
     d = words.values()
      
     if b == words[a]:                        #проверка ввода 
@@ -36,10 +36,9 @@ while words:
         error.append(a)
     words.pop(a)                             #удаление элемента со словаря
     print ('\n')
+
 print 'Results_Good!: ' + str(s)
-print 'Results_Bad!: ' + str(k)
-print ('\n')
-print (error)
+print 'Results_Bad!: ' + str(k) + '\n'
 
-
-
+for i in error:
+    print('- '+ i)
