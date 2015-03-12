@@ -1,10 +1,9 @@
 git pull - get latest version/state from repository
 
-
 git add [file or directory] - notify git client about local file changes.
 Ex:  git add english.py
 
 git commit -m "Message"  - commit changes
 Ex:  git commit -m "Read all words from file"
 
-git push orgin master
+git push origin master
